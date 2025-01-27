@@ -1,31 +1,91 @@
 :root {
-  /* colors */
   --max-content-width: 1360px;
-  --global-bg-color: #eeebe5;
-  --primary-color: #333333;
-  --secondary-color: #5700ff;
+
+  /* colors */
+  --white: #ffffff;
+  --black: #000000;
+
+  --primary50: #5700ff;
+  --primary60: #7833ff;
+  --primary70: #9a66ff;
+  --primary80: #bc99ff;
+  --primary90: #decffc;
+  --primary95: #eee5ff;
+  --primary97: #f5f0ff;
+  --primary99: #fcfaff;
+
+  --light85: #e1dbd1;
+  --light90: #ebe7e0;
+  --light92: #eeebe5;
+  --light95: #f5f3f0;
+  --light96: #f7f6f3;
+  --light97: #f9f8f6;
+  --light98: #fbfaf9;
+  --light99: #fdfdfc;
+
+  --grey10: #191919;
+  --grey20: #333333;
+  --grey30: #4c4c4c;
+  --grey40: #666666;
+  --grey50: #808080;
+  --grey60: #999999;
+  --grey70: #b3b3b3;
+  --grey80: #cccccc;
+
+  --purple: #9e00ff;
+  --green: #5edc11;
+  --yellow: #ffce22;
+  --orange: #ff7222;
+  --pink: #ff22e9;
+  --blue: #2260ff;
 
   /* font-weight */
   --regular: 400;
   --medium: 500;
   --semibold: 600;
   --bold: 700;
+
+  /* spacing */
+  --spacing-xs: 0.8rem;
+  --spacing-sm: 1.6rem;
+  --spacing-md: 2.4rem;
+  --spacing-lg: 3.2rem;
+
+  /* font-sizing */
+  --font-size-heading-xl: 3.8rem;
+  --font-size-heading-lg: 2.8rem;
+  --font-size-heading-md: 2.4rem;
+  --font-size-heading-sm: 1.8rem;
+  --font-size-body-lg: 1.6rem;
+  --font-size-body-md: 1.4rem;
+  --font-size-body-sm: 1.2rem;
 }
 
-/* Styles globaux (mobile-first) */
+/* Styles globaux (mobile-first)*/
+html {
+  font-size: 62.5%; /* 1rem = 10px */
+}
+
 body {
   font-family: Arial, sans-serif;
-  color: var(--primary-color);
-  background-color: var(--global-bg-color);
+  color: var(--grey20);
+  background-color: var(--light85);
   font-family: "Manrope", serif;
+  padding: 0 var(--spacing-sm);
+}
+
+.heading-xl {
+  font-size: var(--font-size-heading-xl);
+  color: var(--primary50);
 }
 
 .header {
   display: flex;
+  padding: var(--spacing-md) 0;
 }
 
 .header-left {
-  flex: 1;
+  flex: 2;
 }
 
 .header-right {
@@ -33,39 +93,73 @@ body {
 }
 
 .name {
-  color: var(--secondary-color);
+  color: var(--primary50);
   font-weight: var(--semibold);
-  font-size: 18px;
+  font-size: var(--font-size-heading-sm);
 }
 
-/* Breakpoint for standard phones (>= 576px) */
+/* Breakpoint for tablet in portrait mode (>= 576px) */
 @media (min-width: 576px) {
+  html {
+    font-size: 70.5%;
+  }
+
   .header {
-    padding: 20px 16px;
+    padding: var(--spacing-md) 0;
+  }
+
+  .header-left {
+    flex: 1;
+  }
+
+  .header-right {
+    flex: 1;
   }
 }
 
-/* Breakpoint for tablets (>= 768px) */
+/* Breakpoint forsmall laptop and tablet in landscape mode  (>= 768px) */
 @media (min-width: 768px) {
+  html {
+    font-size: 78.5%;
+  }
+
+  body {
+    padding: 0 var(--spacing-lg);
+  }
+
   .header {
-    padding: 20px 32px;
+    padding: var(--spacing-md) 0;
   }
 }
 
 /* Breakpoint for standard laptop(>= 992px) */
 @media (min-width: 992px) {
+  html {
+    font-size: 86.5%;
+  }
+
+  body {
+    padding: 0 80px;
+  }
+
   .header {
-    padding: 20px 80px;
+    padding: var(--spacing-md) 0;
   }
 }
 
 /* Breakpoint for wide screens (>= 1200px) */
 @media (min-width: 1200px) {
+  html {
+    font-size: 92.5%;
+  }
+
   body {
     margin-left: calc((100vw - var(--max-content-width)) / 2);
     margin-right: calc((100vw - var(--max-content-width)) / 2);
+    padding: 0 162px;
   }
+
   .header {
-    padding: 20px 162px;
+    padding: var(--spacing-md) 0;
   }
 }
