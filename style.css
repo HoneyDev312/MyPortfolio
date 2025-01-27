@@ -1,8 +1,15 @@
 :root {
+  /* colors */
   --max-content-width: 1360px;
   --global-bg-color: #eeebe5;
   --primary-color: #333333;
   --secondary-color: #5700ff;
+
+  /* font-weight */
+  --regular: 400;
+  --medium: 500;
+  --semibold: 600;
+  --bold: 700;
 }
 
 /* Styles globaux (mobile-first) */
@@ -27,7 +34,7 @@ body {
 
 .name {
   color: var(--secondary-color);
-  font-weight: 600;
+  font-weight: var(--semibold);
   font-size: 18px;
 }
 
