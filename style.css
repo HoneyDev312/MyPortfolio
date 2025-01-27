@@ -1,0 +1,30 @@
+:root {
+  --max-content-width: 1360px;
+}
+
+/* Styles globaux (mobile-first) */
+body {
+  font-family: Arial, sans-serif;
+  color: #333;
+}
+
+/* Breakpoint for standard phones (>= 576px) */
+@media (min-width: 576px) {
+}
+
+/* Breakpoint for tablets (>= 768px) */
+@media (min-width: 768px) {
+}
+
+/* Breakpoint for standard laptop(>= 992px) */
+@media (min-width: 992px) {
+}
+
+/* Breakpoint for wide screens (>= 1200px) */
+@media (min-width: 1200px) {
+  body {
+    background-color: #bbb;
+    margin-left: calc((100vw - var(--max-content-width)) / 2);
+    margin-right: calc((100vw - var(--max-content-width)) / 2);
+  }
+}
