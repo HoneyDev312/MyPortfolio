@@ -1,0 +1,71 @@
+:root {
+  /* colors */
+  --max-content-width: 1360px;
+  --global-bg-color: #eeebe5;
+  --primary-color: #333333;
+  --secondary-color: #5700ff;
+
+  /* font-weight */
+  --regular: 400;
+  --medium: 500;
+  --semibold: 600;
+  --bold: 700;
+}
+
+/* Styles globaux (mobile-first) */
+body {
+  font-family: Arial, sans-serif;
+  color: var(--primary-color);
+  background-color: var(--global-bg-color);
+  font-family: "Manrope", serif;
+}
+
+.header {
+  display: flex;
+}
+
+.header-left {
+  flex: 1;
+}
+
+.header-right {
+  flex: 1;
+}
+
+.name {
+  color: var(--secondary-color);
+  font-weight: var(--semibold);
+  font-size: 18px;
+}
+
+/* Breakpoint for standard phones (>= 576px) */
+@media (min-width: 576px) {
+  .header {
+    padding: 20px 16px;
+  }
+}
+
+/* Breakpoint for tablets (>= 768px) */
+@media (min-width: 768px) {
+  .header {
+    padding: 20px 32px;
+  }
+}
+
+/* Breakpoint for standard laptop(>= 992px) */
+@media (min-width: 992px) {
+  .header {
+    padding: 20px 80px;
+  }
+}
+
+/* Breakpoint for wide screens (>= 1200px) */
+@media (min-width: 1200px) {
+  body {
+    margin-left: calc((100vw - var(--max-content-width)) / 2);
+    margin-right: calc((100vw - var(--max-content-width)) / 2);
+  }
+  .header {
+    padding: 20px 162px;
+  }
+}
