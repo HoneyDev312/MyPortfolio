@@ -74,6 +74,7 @@ body {
   padding: 0 var(--spacing-sm);
 }
 
+/* titles */
 .heading-xl {
   font-size: var(--font-size-heading-xl);
   color: var(--primary50);
@@ -83,6 +84,7 @@ body {
   font-size: var(--font-size-heading-lg);
 }
 
+/* header */
 .header {
   display: flex;
   flex-direction: column;
@@ -93,6 +95,9 @@ body {
 
 .header-name {
   flex: 1;
+  color: var(--primary50);
+  font-weight: var(--semibold);
+  font-size: var(--font-size-heading-sm);
 }
 
 .header-nav {
@@ -113,10 +118,67 @@ body {
   background-color: var(--primary95);
 }
 
-.name {
+/* about me */
+.about-me {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: var(--spacing-lg) 0;
+}
+
+.about-me-picture {
+  height: 40rem;
+  border-radius: 0.6rem;
+  margin-bottom: var(--spacing-md);
+}
+
+.about-me-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.about-me-hello {
+  font-size: var(--font-size-body-md);
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: 0.6rem;
+  background-color: var(--light95);
+  align-self: center;
+}
+
+.about-me-title {
+  margin: var(--spacing-sm) 0;
+  text-align: center;
+}
+
+.about-me-desc {
+  font-size: var(--font-size-body-md);
+  text-align: center;
+}
+
+.about-me-figures-container {
+  display: flex;
+  flex: 1;
+  background-color: var(--light95);
+  border-radius: 0.6rem;
+  padding: var(--spacing-xs) var(--spacing-sm);
+  margin: var(--spacing-md) 0;
+}
+
+.about-me-figures-block {
+  margin-right: var(--spacing-md);
+}
+
+.about-me-figures {
+  font-size: var(--font-size-heading-lg);
+  font-weight: var(--medium);
+}
+
+.about-me-plus {
   color: var(--primary50);
-  font-weight: var(--semibold);
-  font-size: var(--font-size-heading-sm);
+}
+
+.about-me-figures-label {
+  font-size: var(--font-size-body-sm);
 }
 
 /* Breakpoint for tablet in portrait mode (>= 576px) */
@@ -152,6 +214,42 @@ body {
     flex: 1;
     justify-content: flex-end;
     align-items: center;
+  }
+
+  .about-me {
+    flex-direction: row-reverse;
+  }
+
+  .about-me-picture {
+    height: 50rem;
+    border-radius: 0.6rem;
+    margin-bottom: var(--spacing-md);
+  }
+
+  .about-me-content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .about-me-hello {
+    align-self: flex-start;
+  }
+
+  .about-me-title {
+    margin: var(--spacing-sm) 0;
+    text-align: start;
+    padding-right: var(--spacing-lg);
+  }
+
+  .about-me-desc {
+    font-size: var(--font-size-body-md);
+    text-align: start;
+    padding-right: var(--spacing-lg);
+  }
+
+  .about-me-figures-container {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
   }
 }
 
