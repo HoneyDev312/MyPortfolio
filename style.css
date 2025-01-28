@@ -69,7 +69,7 @@ html {
 body {
   font-family: Arial, sans-serif;
   color: var(--grey20);
-  background-color: var(--light85);
+  background-color: var(--light90);
   font-family: "Manrope", serif;
   padding: 0 var(--spacing-sm);
 }
@@ -79,17 +79,38 @@ body {
   color: var(--primary50);
 }
 
+.heading-lg {
+  font-size: var(--font-size-heading-lg);
+}
+
 .header {
   display: flex;
+  flex-direction: column;
   padding: var(--spacing-md) 0;
+  gap: var(--spacing-sm);
+  border-bottom: 0.1rem var(--grey70) solid;
 }
 
-.header-left {
-  flex: 2;
-}
-
-.header-right {
+.header-name {
   flex: 1;
+}
+
+.header-nav {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+}
+
+.header-link {
+  font-size: var(--font-size-body-md);
+  padding: var(--spacing-xs) var(--spacing-sm);
+  margin: 0 calc(var(--spacing-xs) / 2);
+  border-radius: 0.6rem;
+  background-color: var(--light95);
+}
+
+.header-link:active {
+  background-color: var(--primary90);
 }
 
 .name {
@@ -107,35 +128,37 @@ body {
   .header {
     padding: var(--spacing-md) 0;
   }
-
-  .header-left {
-    flex: 1;
-  }
-
-  .header-right {
-    flex: 1;
-  }
 }
 
 /* Breakpoint forsmall laptop and tablet in landscape mode  (>= 768px) */
 @media (min-width: 768px) {
-  html {
-    font-size: 78.5%;
-  }
-
   body {
     padding: 0 var(--spacing-lg);
   }
 
   .header {
     padding: var(--spacing-md) 0;
+    flex-direction: row;
+  }
+
+  .header-name {
+    display: flex;
+    flex: 1;
+    align-items: center;
+  }
+
+  .header-nav {
+    display: flex;
+    flex: 1;
+    justify-content: flex-end;
+    align-items: center;
   }
 }
 
 /* Breakpoint for standard laptop(>= 992px) */
 @media (min-width: 992px) {
   html {
-    font-size: 86.5%;
+    font-size: 78.5%;
   }
 
   body {
@@ -150,7 +173,7 @@ body {
 /* Breakpoint for wide screens (>= 1200px) */
 @media (min-width: 1200px) {
   html {
-    font-size: 92.5%;
+    font-size: 86.5%;
   }
 
   body {
