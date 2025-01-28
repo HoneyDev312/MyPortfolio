@@ -69,7 +69,7 @@ html {
 body {
   font-family: Arial, sans-serif;
   color: var(--grey20);
-  background-color: var(--light90);
+  background-color: var(--light85);
   font-family: "Manrope", serif;
   padding: 0 var(--spacing-sm);
 }
@@ -110,7 +110,7 @@ body {
 }
 
 .header-link:active {
-  background-color: var(--primary90);
+  background-color: var(--primary95);
 }
 
 .name {
