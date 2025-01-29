@@ -74,7 +74,7 @@ body {
   padding: 0 var(--spacing-sm);
 }
 
-/* titles */
+/* HEADING */
 .heading-xl {
   font-size: var(--font-size-heading-xl);
   color: var(--primary50);
@@ -85,7 +85,12 @@ body {
   font-weight: var(--semibold);
 }
 
-/* header */
+.heading-sm {
+  font-size: var(--font-size-heading-sm);
+  font-weight: var(--semibold);
+}
+
+/* HEADER */
 .header {
   display: flex;
   flex-direction: column;
@@ -119,7 +124,7 @@ body {
   background-color: var(--primary95);
 }
 
-/* about me */
+/* ABOUT ME */
 .about-me {
   display: flex;
   flex-direction: column;
@@ -182,17 +187,6 @@ body {
   font-size: var(--font-size-body-sm);
 }
 
-/* Breakpoint for tablet in portrait mode (>= 576px) */
-@media (min-width: 576px) {
-  html {
-    font-size: 70.5%;
-  }
-
-  .header {
-    padding: var(--spacing-md) 0;
-  }
-}
-
 /* TECH STACK */
 
 .tech-stack-title {
@@ -214,6 +208,70 @@ body {
 
 .tech-stack-logo {
   width: 8rem;
+}
+
+/* PROJECTS */
+
+.projects-title {
+  text-align: center;
+}
+
+.projects-subtitle {
+  text-align: center;
+  font-size: var(--font-size-body-lg);
+}
+
+.projects-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  margin: var(--spacing-md) 0;
+  gap: var(--spacing-sm);
+}
+
+.projects-card {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  background-color: var(--light95);
+  border-radius: 0.6rem;
+  padding: var(--spacing-sm);
+}
+
+.projects-card-logo {
+  height: 20rem;
+  margin-bottom: var(--spacing-xs);
+}
+
+.projects-card-content {
+  border-top: 0.1rem solid var(--grey20);
+}
+
+.projects-card-type {
+  font-size: var(--font-size-body-sm);
+}
+
+.projects-card-title {
+  margin: var(--spacing-xs) 0;
+}
+
+.projects-card-desc {
+  font-size: var(--font-size-body-md);
+}
+
+/* Breakpoint for tablet in portrait mode (>= 576px) */
+@media (min-width: 576px) {
+  html {
+    font-size: 70.5%;
+  }
+
+  .header {
+    padding: var(--spacing-md) 0;
+  }
+
+  .projects-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 /* Breakpoint forsmall laptop and tablet in landscape mode  (>= 768px) */
@@ -290,14 +348,14 @@ body {
   .header {
     padding: var(--spacing-md) 0;
   }
+
+  .tech-stack-logo {
+    width: 9rem;
+  }
 }
 
 /* Breakpoint for wide screens (>= 1200px) */
 @media (min-width: 1200px) {
-  html {
-    font-size: 86.5%;
-  }
-
   body {
     margin-left: calc((100vw - var(--max-content-width)) / 2);
     margin-right: calc((100vw - var(--max-content-width)) / 2);
@@ -306,5 +364,10 @@ body {
 
   .header {
     padding: var(--spacing-md) 0;
+  }
+
+  .projects-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
   }
 }
