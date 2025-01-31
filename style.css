@@ -40,6 +40,7 @@
   --blue: #2260ff;
 
   /* font-weight */
+  --light: 200;
   --regular: 400;
   --medium: 500;
   --semibold: 600;
@@ -99,7 +100,8 @@ body {
   border-bottom: 0.1rem var(--grey70) solid;
 }
 
-.header-name {
+.header-name,
+.footer-name {
   flex: 1;
   color: var(--primary50);
   font-weight: var(--semibold);
@@ -256,6 +258,72 @@ body {
   font-size: var(--font-size-body-md);
 }
 
+/* FOOTER */
+.footer {
+  position: relative;
+  border-top: 0.1rem solid var(--grey20);
+  padding-top: var(--spacing-sm);
+}
+
+.footer-name {
+  text-align: end;
+  margin-bottom: var(--spacing-sm);
+}
+
+.footer-links,
+.footer-contacts {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  margin-bottom: var(--spacing-sm);
+  gap: var(--spacing-sm);
+}
+
+.footer-contacts {
+  gap: calc(var(--spacing-lg) * 2);
+}
+
+.footer-block {
+  cursor: pointer;
+}
+
+.footer-block:focus-within .footer-label {
+  display: block;
+  width: 60%;
+  padding: var(--spacing-md) 0;
+  text-align: center;
+  background-color: var(--light95);
+  border-radius: 0.6rem;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+  font-size: var(--font-size-body-md);
+  font-weight: var(--medium);
+}
+
+.footer-label {
+  display: none;
+}
+
+.footer-to-top {
+  display: block;
+  text-align: center;
+  margin: var(--spacing-sm) 0;
+  font-size: var(--font-size-body-md);
+  cursor: pointer;
+}
+
+.footer-icon {
+  color: var(--primary50);
+  font-size: 2.8rem;
+}
+
+.copyrights {
+  text-align: center;
+  font-weight: var(--light);
+}
+
 /* Breakpoint for tablet in portrait mode (>= 576px) */
 @media (min-width: 576px) {
   html {
@@ -330,6 +398,16 @@ body {
   .about-me-figures-container {
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
+  }
+
+  .footer-container {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+
+  .footer-links {
+    order: 1;
+    justify-content: flex-start;
   }
 }
 
