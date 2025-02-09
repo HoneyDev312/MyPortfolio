@@ -16,6 +16,10 @@
       src="https://kit.fontawesome.com/d6ddfae692.js"
       crossorigin="anonymous"
     ></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
   </head>
   <body>
     <!-- HEADER -->
@@ -221,6 +225,69 @@
       </div>
     </section>
 
+    <!-- CONTACT FORM -->
+    <section class="contact" id="contact">
+      <h2 class="contact-title heading-lg">Contactez-moi</h2>
+      <p class="contact-subtitle">N'hésitez pas à me contacter</p>
+      <form id="form" class="form">
+        <input
+          class="form-input"
+          type="text"
+          id="last-name"
+          name="last-name"
+          placeholder="Nom"
+          autocomplete="off"
+          required
+        />
+
+        <input
+          class="form-input"
+          type="text"
+          id="first-name"
+          name="first-name"
+          placeholder="Prénom"
+          autocomplete="off"
+          required
+        />
+
+        <input
+          class="form-input"
+          type="email"
+          id="email"
+          name="email"
+          placeholder="Email"
+          autocomplete="off"
+          required
+        />
+
+        <input
+          class="form-input"
+          type="number"
+          id="phone"
+          name="phone"
+          placeholder="Numéro de téléphone"
+          autocomplete="off"
+          required
+        />
+
+        <textarea
+          class="form-input"
+          id="message"
+          name="message"
+          placeholder="Message"
+          rows="7"
+          minlength="10"
+          maxlength="1000"
+          required
+        ></textarea>
+
+        <div class="form-submit">
+          <button class="form-button" type="submit">Envoyer</button>
+          <p class="form-error" id="error-message" style="color: red"></p>
+        </div>
+      </form>
+    </section>
+
     <!-- FOOTER -->
     <footer class="footer">
       <div class="footer-container">
@@ -261,4 +328,5 @@
       </p>
     </footer>
   </body>
+  <script src="/script.js"></script>
 </html>

@@ -258,6 +258,60 @@ body {
   font-size: var(--font-size-body-md);
 }
 
+/* CONTACT FORM */
+
+.contact {
+  border-top: 0.1rem solid var(--grey20);
+  padding: var(--spacing-sm) 0;
+}
+
+.contact-title {
+  text-align: center;
+}
+
+.contact-subtitle {
+  text-align: center;
+  font-size: var(--font-size-body-lg);
+}
+
+.form {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+  padding-top: var(--spacing-sm);
+  gap: var(--spacing-sm);
+}
+
+.form-message {
+  resize: none;
+}
+
+.form-input {
+  width: 100%;
+  border: 0.1rem var(--light85) solid;
+  background-color: var(--light95);
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: 0.6rem;
+  color: var(--grey30);
+  font-size: var(--font-size-body-md);
+  font-family: "Manrope", serif;
+}
+
+.form-input:focus {
+  outline: 0.2rem var(--primary50) solid;
+}
+
+.form-button {
+  background-color: var(--primary50);
+  border: none;
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: 0.6rem;
+  color: var(--white);
+  font-size: var(--font-size-body-md);
+  cursor: pointer;
+}
+
 /* FOOTER */
 .footer {
   position: relative;
@@ -398,6 +452,12 @@ body {
   .about-me-figures-container {
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
+  }
+
+  .form-name,
+  .form-email,
+  .form-message {
+    width: 60%;
   }
 
   .footer-container {
