@@ -229,7 +229,7 @@
     <section class="contact" id="contact">
       <h2 class="contact-title heading-lg">Contactez-moi</h2>
       <p class="contact-subtitle">N'hésitez pas à me contacter</p>
-      <form id="form" class="form">
+      <form id="form" class="form" novalidate>
         <input
           class="form-input"
           type="text"
@@ -280,10 +280,11 @@
           maxlength="1000"
           required
         ></textarea>
-
+        <p class="form-error" id="error-message"></p>
         <div class="form-submit">
-          <button class="form-button" type="submit">Envoyer</button>
-          <p class="form-error" id="error-message" style="color: red"></p>
+          <button class="form-button" id="form-button" type="submit">
+            Envoyer
+          </button>
         </div>
       </form>
     </section>

@@ -312,6 +312,17 @@ body {
   cursor: pointer;
 }
 
+.form-button:disabled {
+  background-color: var(--primary90);
+  cursor: not-allowed;
+}
+
+.form-error {
+  color: var(--orange);
+  font-size: var(--font-size-body-md);
+  font-weight: var(--semibold);
+}
+
 /* FOOTER */
 .footer {
   position: relative;
@@ -454,9 +465,7 @@ body {
     border-bottom-right-radius: 0;
   }
 
-  .form-name,
-  .form-email,
-  .form-message {
+  .form- input {
     width: 60%;
   }
 
